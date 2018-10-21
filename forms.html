@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta chatrset="utf=8">
+		<title>
+			Registration Form
+		</title>
+		<style>
+			h1{
+				text-align:center;
+			}
+			#main{
+				font-size:20px;
+				margin:40px;
+			}
+			.one{
+				margin:10px;
+		
+			}
+			
+			input[type=radio]{
+				margin:10px;
+				background-color:pink;
+			}
+			textarea{
+				width:260px;
+				height:130px;
+				padding:10px;
+
+			}
+			select{
+				width:110px;
+				height:30px;
+				margin-top:10px;
+				margin-bottom:10px;
+			}
+			.upload{
+				padding:6px;
+				margin-top:10px;
+				margin-bottom:10px;
+				
+				border-radius:5px;
+			}
+			marquee{
+				font-size:30px;
+
+			}
+		</style>
+	</head>
+	<body>
+	<h1> Registration Form</h1>
+	<marquee scrollamouount="100" scrolldelay="10">Fill this form to get registered to Lucky draw</marquee>
+		<form id="main" onsubmit="fun()">
+			First Name:<input  name="fname" class="one" type="text" ><br>
+			Last name: <input name="lname" class="one"  type="text"><br>
+			Password: <input name="pwd" max="15" min="5" class="one" type="password"><br>
+			<strong>Favourite Subject: </strong>
+			<br><input text-align="left" class="one" type="checkbox" name="subject"  value="on" checked="yes"> maths <br>
+			<input class="one" type="checkbox"  name="subject" value="on"> physics<br>
+			<input class="one" type="checkbox" name="subject"  value="on"> chemistry<br>
+			<strong>Select Gender:</strong><br>
+			<input type="radio" name="gender" value="female" >Female<br>
+			<input type="radio" name="gender" value="male">Male<br>
+			<strong>Select Fav Hero:</strong><br>
+			<select name="dropdown" >
+				<option value="Ram"> Ram </option>
+				<option value="Alluarjun"> Allu arjun </option>
+				<option value="Nani"> Nani </option>
+				<option value="Maheshbabu"> Mahesh Babu </option>
+			</select><br>
+			<strong>Upload Your photo</strong><br>
+			<input type="file" name="fileupload" accept="Image/*">
+			<br>
+
+			<h4> Enter your feedback Below</h4>
+			<textarea rows="5" columns="10" scrollbar:"No">
+				
+			</textarea>
+			<br>
+			<input class="upload" type="submit" value="submit">
+			<input class="upload" type="reset" value="reset">
+		</form>
+		<p id="demo"></p>
+		<script>
+			function fun(){
+				var a=document.forms["main"]["fname"].value;
+				var b=document.forms["main"]["pwd"].value;
+				if(a==""){
+					alert("enter the First name it's compulsory"+b);
+				}
+				 if(document.forms["main"]["pwd"].value=="" || document.forms["main"]["pwd"].value.length<6){
+				 	alert("wrong password");
+				 }
+			}
+		</script>
+			</body>
+</html>
